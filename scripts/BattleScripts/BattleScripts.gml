@@ -13,3 +13,10 @@ function MenuItem(_label, _actionId, _enabled) constructor {
     actionId = _actionId;
     enabled = _enabled;
 }
+
+function AttackPattern(_name, _difficultyMin, _weight, _executeFunc) constructor {
+    name = _name;
+    difficultyMin = _difficultyMin;
+    weight = _weight;
+    execute = _executeFunc;
+}
