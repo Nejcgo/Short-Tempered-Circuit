@@ -43,7 +43,7 @@
 
 //Set to <true> to enable the `.get_glyph_data()` method on text elements (and a few other features
 //too). This will apply to all text elements and carries a performance penalty.
-#macro SCRIBBLE_FORCE_GLYPH_DATA_GETTER  false
+#macro SCRIBBLE_FORCE_GLYPH_DATA_GETTER  true
 
 //Set to <true> to enable the `.get_line_data()` method on text elements (and a few other features
 //too). This will apply to all text elements and carries a performance penalty.
@@ -207,6 +207,6 @@
 // Low double quote    „ U+201E   ->   Double quote     " U+0022
 // High double quote   ‟ U+201F   ->   Double quote     " U+0022
 // Greek question mark ; U+037E   ->   Semicolon        ; U+003B
-#macro SCRIBBLE_UNDO_UNICODE_SUBSTITUTIONS  false
+#macro SCRIBBLE_UNDO_UNICODE_SUBSTITUTIONS  true
 
 #endregion

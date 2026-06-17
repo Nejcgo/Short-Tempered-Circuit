@@ -4,10 +4,16 @@ var skip = keyboard_check_pressed(vk_escape);
 if (click) {
     if (chatterbox != noone) {
         if (ChatterboxIsWaiting(chatterbox)) {
-            ChatterboxContinue(chatterbox);
-
-            charName = ChatterboxGetContentSpeaker(chatterbox, curLine);
-            text = ChatterboxGetContentSpeech(chatterbox, curLine);
+            if (typist.get_state() >= 1) { 
+                ChatterboxContinue(chatterbox);
+                
+                audio_play_sound(sfxTextboxSkip, 5, false);
+                
+                charName = ChatterboxGetContentSpeaker(chatterbox, curLine);
+                text = ChatterboxGetContentSpeech(chatterbox, curLine);
+            } else {
+                typist.skip();
+            }
         }
     }
 }
