@@ -10,6 +10,7 @@ if (click) {
                 audio_play_sound(sfxTextboxSkip, 5, false);
                 
                 charName = ChatterboxGetContentSpeaker(chatterbox, curLine);
+                hasName = charName != "";
                 text = ChatterboxGetContentSpeech(chatterbox, curLine);
             } else {
                 typist.skip();
@@ -25,6 +26,13 @@ if (skip) {
         typist = scribble_typist().in(1, 0);
 
         charName = ChatterboxGetContentSpeaker(chatterbox, curLine);
+        hasName = charName != "";
         text = ChatterboxGetContentSpeech(chatterbox, curLine);
     }
 }
+
+formattedText = scribble(text).starting_format("fntSmallPixel", #FFFFFF).line_spacing(15).scale(1).wrap(302);
+if (hasName) {
+    formattedCharName = scribble(string_concat(/*"[slant]", */charName)).starting_format("fntSmallPixel", #FFFFFF);
+}
+

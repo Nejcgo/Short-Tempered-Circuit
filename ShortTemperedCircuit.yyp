@@ -687,6 +687,7 @@
     {"id":{"name":"sfxTextboxSkip","path":"sounds/sfxTextboxSkip/sfxTextboxSkip.yy",},},
     {"id":{"name":"scribble_fallback_bulletpoint","path":"sprites/scribble_fallback_bulletpoint/scribble_fallback_bulletpoint.yy",},},
     {"id":{"name":"sTextBox","path":"sprites/sTextBox/sTextBox.yy",},},
+    {"id":{"name":"sTextBoxNameplate","path":"sprites/sTextBoxNameplate/sTextBoxNameplate.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
