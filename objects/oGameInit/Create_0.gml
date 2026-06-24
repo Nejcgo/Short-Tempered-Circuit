@@ -8,4 +8,4 @@ surface_resize(application_surface, SCREEN_WIDTH*global.pixelScale, SCREEN_HEIGH
 
 alarm[0] = 1;
 
-room_goto(rTextTest);
+room_goto(rMikaFight);

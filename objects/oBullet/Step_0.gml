@@ -5,7 +5,7 @@ if (moveFunc != undefined) {
 	y += lengthdir_y(spd, dir);
 }
 
-if (place_meeting(x, y, oSoul)) {
+if (place_meeting(x, y, oHeart)) {
 	oBattleController.takeDamage(damage, givesInvuln);
 	
 	if (onHit != undefined) {
