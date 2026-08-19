@@ -9,10 +9,10 @@ if (place_meeting(x, y, oHeart)) {
 	oBattleController.takeDamage(damage, givesInvuln);
 	
 	if (onHit != undefined) {
-		onHit();	
+		onHit();
 	}
 	
 	if (destroys) {
-		instance_destroy();	
+		instance_destroy();
 	}
 }

@@ -15,7 +15,7 @@ STRETCH_FACTOR = 0.2;
 image_xscale = 0.5;
 image_yscale = 0.5;
 
-particleSyst = part_system_create();
+particleSyst = part_system_create_layer("PARTICLES1", true);
 part_system_draw_order(particleSyst, true);
 
 trailParticle = part_type_create();
