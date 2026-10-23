@@ -1,15 +1,31 @@
-// Reference to the battle state struct (the controller sets this)
+enum menuStates {
+    SPAWNING,
+    MENU,
+    LEAVE
+};
+
 battle = undefined;
 
 // Current mode: "main" for the top‑level 3 buttons, "act" for the submenu
 menuMode = "main";
 
-// Cursor index (0‑based)
 cursorIndex = 0;
 
-// Array of MenuItem structs for the current mode
-menuItems = [];
+state = menuStates.SPAWNING;
 
-// Sounds (optional)
-sndMove = sfxCursor;   // peep when moving selection
-sndConfirm = sfxSelect; // sound on confirm
+menuSize = 109;
+buttonSpacing = 2;
+buttonWidth = 75;
+numButtons = 3;
+buttonHeight = (menuSize - ((numButtons - 1) * buttonSpacing)) / numButtons;
+
+selectedIndex = 1;
+
+menuItems = [
+    new BattleButton("FIGHT", noone, undefined),
+    new BattleButton("ACT", noone, undefined),
+    new BattleButton("CENTER", noone, undefined),
+];
+
+sndMove = sfxSelect;
+sndConfirm = sfxConfirm;

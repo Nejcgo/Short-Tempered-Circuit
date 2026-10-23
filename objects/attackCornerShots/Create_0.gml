@@ -1,4 +1,4 @@
-duration = 600;
+duration = 300;
 
 frequency = 25;
 timeLeft = duration;

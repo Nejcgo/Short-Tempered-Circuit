@@ -7,7 +7,7 @@ if (moveFunc != undefined) {
 
 if (place_meeting(x, y, oHeart)) {
 	oBattleController.takeDamage(damage, givesInvuln);
-	
+    
 	if (onHit != undefined) {
 		onHit();
 	}

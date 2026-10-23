@@ -1,3 +1,7 @@
+if (oBattleController.battle.invulnFrames != 0) {
+    image_alpha = sin(current_time * (oBattleController.battle.maxInvulnFrames - oBattleController.battle.invulnFrames + 10) / 1000);
+}
+
 if (spd != 0) {
     moveAngle = point_direction(0,0,hsp,vsp);
     prevMatrix = matrix_get(matrix_world);
@@ -5,7 +9,7 @@ if (spd != 0) {
     var stretch = 1+spd*STRETCH_FACTOR;
     var pinch = 1/stretch;
     
-    moveToOrigin = matrix_build(-x,-y,0, 0,0,0, 1,1,1);
+    moveToOrigin = matrix_build(-x,-y, 0, 0,0,0, 1,1,1);
     rotateToAngle = matrix_build(0,0,0, 0,0,-moveAngle, 1,1,1);
     stretchMatrix = matrix_build(0,0,0, 0,0,0, stretch,pinch,1);
     rotateFromAngle = matrix_build(0,0,0, 0,0,moveAngle, 1,1,1);
@@ -18,8 +22,10 @@ if (spd != 0) {
     everythingMatrix = matrix_multiply(everythingMatrix, moveFromOrigin);
     
     matrix_set(matrix_world, everythingMatrix);
-    draw_self();
+    draw_self_shake(0.5);
     matrix_set(matrix_world, prevMatrix);
 } else {
-    draw_self();
+    draw_self_shake(0.5);
 }
+
+image_alpha = 1;

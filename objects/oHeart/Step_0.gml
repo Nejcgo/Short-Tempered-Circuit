@@ -9,10 +9,14 @@ if (boost && boostCooldown < 0) {
 }
 
 hsp = (hor/(1+abs(vert)*0.4)) * moveSp * curBoost;
-x += hsp;
+
+x = clamp(x + hsp, oBattleController.boxLeft+2, oBattleController.boxRight-2);
+if (x+hsp < oBattleController.boxLeft+2 || x+hsp > oBattleController.boxRight-2) hsp = 0;
 
 vsp = (vert/(1+abs(hor)*0.4)) * moveSp * curBoost;
-y += vsp;
+
+y = clamp(y + vsp, oBattleController.boxTop+2, oBattleController.boxBottom-2);
+if (y+vsp < oBattleController.boxTop+2 || y+vsp > oBattleController.boxBottom-2) vsp = 0;
 
 spd = point_distance(0,0,hsp,vsp);
 

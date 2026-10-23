@@ -3,6 +3,9 @@
 
 global.pixelScale = 4;
 
+global.screenXOffset = 0;
+global.screenYOffset = 0;
+
 window_set_size(SCREEN_WIDTH*global.pixelScale, SCREEN_HEIGHT*global.pixelScale);
 surface_resize(application_surface, SCREEN_WIDTH*global.pixelScale, SCREEN_HEIGHT*global.pixelScale);
 
